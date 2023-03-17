@@ -209,21 +209,24 @@
         <table Class="form">
             <tbody>
                 <form action="processed.php" method="post">
-                    <tr id="info">
+                    <tr class="info">
                         <td colspan="5">
                             <label form="fullname" id="section">Full Name</label> <br>
                             <input type="text" name="fullname" id="fullname" placeholder="Last Name, First Name"><br>
                         
-                        
+                            <br>
+
                             <label form="email-adress" id="section">Email Adress</label> <br>
                             <input type="email" name="email" id="email" placeholder="email@mail.com"><br>
-                        
+                            
+                            <br>
+
                             <label form="phone-number" id="section">Phone Number</label> <br>
                             <input type="tel" name="phone-number" id="phone-number" placeholder="(+63)912345678"><br>
                             
                             <br>
-                            <label form="reservation-detalls" id="section2">Reservation Detalls</label><br>
-                            <br>
+                            <label form="reservation-detals" id="reservation-details">Reservation Detals</label>
+                            
 
                             <label form="number-of-guest" id="section">Number of Guest</label><br>
                             <select>
@@ -237,45 +240,60 @@
                                 <option value="8">8</option>
                             </select><br>
 
+                            <br>
+
                             <label form="reservation-date" id="section">Reservation Date</label><br>
                             <input type="date" name="reservation-date" id="reservation-date" placeholder="mm/dd/yyyy"><br>
-
-                            <span>Reservation Time</span>
-                            <input type="checkbox" name="time" id="morning">
-                            <label form="morning">morning</label>
+                            
+                            <br>
+                            
+                            <span id="time">Reservation Time</span>
+                            <input type="checkbox" name="morning" id="time2">
+                            <label form="morning" id="section">Morning</label>
     
-                            <input type="checkbox" name="time" id="afternoon">
-                            <label form="morning">Afternoon</label>
+                            <input type="checkbox" name="afternoon" id="time2">
+                            <label form="morning" id="section">Afternoon</label>
     
-                            <input type="checkbox" name="time" id="Night">
-                            <label form="morning">Night</label><br>
+                            <input type="checkbox" name="nite" id="time2">
+                            <label form="morning" id="section">Night</label>
                             
                         </td>
 
-                        <td colspan="5">
-                            <label form="additional-request" id="section">Additional Request</label> <br>
-                            <textarea name="comments" id="comments" rows="4" Placeholder=></textarea><br>
+                        <td rowspan="5">
+                            <label form="additional-request" id="section2">Additional Request</label> <br>
+                            <textarea name="comments" id="comments" rows="8" Placeholder=></textarea><br>
+
+                            <br>
 
                             <div id="payment">
                                 PAYMENT
                             </div> 
-                            <img src="assets/images/reservation-cards.png" id="card-type">
+                            
+                            <div id="credit-cards">
+                                <img src="assets/images/reservation-cards.png" class="card-type">
+                            </div>
 
-                            <div id="accepted-cards">
+                            <br>
+
+                            <div id="section2">
                                 Payment Accepted Cards
                             </div>
 
                             <label form="fullname" id="section">Full Name</label> <br>
                             <input type="text" name="fullname" id="fullname" placeholder="John Doe"><br>
 
+                            <br>
+
                             <label form="Credit" id="section2">Credit Card Number</label> <br>
                             <input type="number"  name="Credit" id="Credit" placeholder="1234567890"><br>
 
-                            <input type="checkbox" name="agree-terms" id="agree-terms"><br>
-                            <span id="section">I agree in the terms and conditions.</span>
+                            <br>
 
-                            <button type="submit">
-                            SEND
+                            <input type="checkbox" name="agree-terms" id="agree-terms">
+                            <span id="section">I agree in the terms and conditions.</span><br>
+
+                            <button type="button">
+                                SEND
                             </button>
 
 
@@ -302,9 +320,9 @@
                 <tbody>
                     <tr>
                         <td colspan="2" class="opening">     
-                            <label for="footer-title">OPENING HOURS</label><br>
+                            <label for="footer-title"id="footer-title">OPENING HOURS</label><br>
                             <br>
-                            <label for="day">Day ‥‥‥‥Availability</h4></label><br>
+                            <label for="day" class="opening-day">Day ‥‥‥‥Availability</h4></label><br>
                             <label for="day">Monday ‥‥‥‥Closed</label><br>
                             <label for="day">Tuesday ‥‥‥‥09:00-22:00</label><br>
                             <label for="day">Wednesday ‥‥‥‥Closed</label><br>
@@ -316,36 +334,46 @@
 
 
                         <td colspan="7" class="post">
-                            <label for="footer-title">LATEST POST</label><br>
-                            <label for="post">Expand your mind, Change Everything</label><br>
-                            <label for="date">14.02.2017</label><br>
-                            <label for="post">Places to get lost</label><br>
-                            <label for="date">14.02.2017</label><br>
-                            <label for="post">Lewis Howes</label><br>
-                            <label for="date">14.02.2017</label><br>
-                            <label for="post">Elevate your Expectatiion</label><br>
-                            <label for="date">14.02.2017</label><br>
+                            <label for="footer-title" id="footer-title">LATEST POST</label><br>
+                            <br>
+                            <label for="post" id="post-title">Expand your mind, Change Everything</label><br>
+                            <label for="date" id="date">14.02.2017</label><br>
+                            <label for="post" id="post-title">Places to get lost</label><br>
+                            <label for="date" id="date">14.02.2017</label><br>
+                            <label for="post" id="post-title">Lewis Howes</label><br>
+                            <label for="date" id="date">14.02.2017</label><br>
+                            <label for="post" id="post-title">Elevate your Expectatiion</label><br>
+                            <label for="date" id="date">14.02.2017</label><br>
                         </td>
 
-                        <td colspan="3" class="contact-us">
-                            <label for="email">info@coffeebean.com</label>
-                            <label for="address">1-444-123-4559<br>Raymond Boulevard 224,Nwe York</label>
+                        <td  class="contact-us">
+                            <label for="footer-title" id="footer-title">CONTACT US</label><br>
+                            <br>
+                            <label for="email" id="contact">info@coffeebean.com</label><br>
+                            <label for="address" id="contact">1-444-123-4559<br>Raymond Boulevard 224,Nwe York</label><br>
 
-                            <label for="standard-post" class="standard-post"> THE LATEST STANDARD POST</label>
-                            <input type="text"><button type="button">SEARCH</button>
+                            <br>
+
+                            <label for="standard-post" id="footer-title"> THE LATEST STANDARD POST</label><br>
+                            <input type="text" id="search-text"><button type="button">SEARCH</button>
                         </td>
 
                         <td colspan="3" class="location">
-                            <label for="other-locations"><h4>OTHER LOCATIONS</h4></label>
-                            <label for="other-locations"><h4>Coffee Bean Philippines</h4></label>
-                            <label for="address">1234 IT Park<br>Cebu City</label>
-                            <label for="other-locations"><h4>Coffee Bean Tokyo</h4></label>
-                            <label for="address">1234 Business Park<br>Tokyo Japan</label>
+                            <label for="other-locations" id="footer-title">OTHER LOCATIONS</label>
+                            <label for="other-locations" ><h4>Coffee Bean Philippines</label>
+                            <label for="address" id="address">1234 IT Park<br>Cebu City</label>
+                            <label for="other-locations">Coffee Bean Tokyo</label>
+                            <label for="address" id="address">1234 Business Park<br>Tokyo Japan</label>
                         </td>
                     </tr>
+                </tbody>
+            </table>
 
-        
-                    <tr id="footer-bottom">
+
+            <table class="footer-bottom">
+                <tbody>
+                    
+                    <tr id=>
                         <td>
                             <div id="foot-coffee-bean">
                                 <h2>COFFEE BEAN</h2>
@@ -353,7 +381,7 @@
                         </td>
                         <td>
                             <div id="sns">
-                                <img src="assets/images/icon-fb.png" alt="Facebook">
+                                <img src="assets/images/icon-fb.png" class="sns" alt="Facebook">
                                 <img src="assets/images/icon-ig_360.png" alt="Instagram">
                                 <img src="assets/images/icon-tw_360.png" alt="twitter">
                             </div>
